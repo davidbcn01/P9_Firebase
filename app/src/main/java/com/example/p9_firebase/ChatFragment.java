@@ -64,7 +64,7 @@ public class ChatFragment extends Fragment {
 
         });
 
-        mdb.collection("mensajes").addSnapshotListener((value, error) -> {
+        mdb.collection("mensajes").orderBy("fecha").addSnapshotListener((value, error) -> {
            chat.clear();
             value.forEach(document ->{
                 chat.add(new Mensaje(document.getString("mensaje"),
