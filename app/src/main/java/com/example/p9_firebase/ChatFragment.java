@@ -60,6 +60,7 @@ public class ChatFragment extends Fragment {
             String autor = mAuth.getCurrentUser().getEmail();
 
             mdb.collection("mensajes").add(new Mensaje(texto, fecha,autor));
+            binding.mensaje.setText("");
 
         });
 
@@ -72,6 +73,7 @@ public class ChatFragment extends Fragment {
 
             });
             chatAdapter.notifyDataSetChanged();
+            binding.chat.scrollToPosition(chat.size()-1);
 
 
 
