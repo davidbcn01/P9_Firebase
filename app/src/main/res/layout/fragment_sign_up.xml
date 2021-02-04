@@ -11,11 +11,10 @@
         android:layout_height="128dp"
         android:id="@+id/foto"
         android:src="@drawable/ic_baseline_person_add_24"/>
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre"
-        android:gravity="center"
+        android:hint="Nombre"
         android:id="@+id/nombre"/>
     <EditText
         android:layout_width="match_parent"
