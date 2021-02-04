@@ -43,7 +43,7 @@ public class SignInFragment extends Fragment {
             String email = binding.email.getText().toString();
             String password = binding.passwd.getText().toString();
 
-            mAuth.createUserWithEmailAndPassword(email,password)
+            mAuth.signInWithEmailAndPassword(email,password)
                     .addOnCompleteListener(task -> {
                         if(task.isSuccessful()){
                             nav.navigate(R.id.action_signInFragment_to_chatFragment);

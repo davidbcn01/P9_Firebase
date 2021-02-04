@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class SignUpFragment extends Fragment {
@@ -39,6 +40,8 @@ public class SignUpFragment extends Fragment {
             super.onViewCreated(view, savedInstanceState);
 
             nav = Navigation.findNavController(view);
+            mAuth = FirebaseAuth.getInstance();
+
             binding.emailSignUp.setOnClickListener(v -> {
                 String email = binding.email.getText().toString();
                 String password = binding.passwd.getText().toString();
